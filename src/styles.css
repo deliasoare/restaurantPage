@@ -1,6 +1,6 @@
 :root {
     --yellow: rgba(255, 179, 0, 0.5);
-    --brown: #7E3D00;
+    --brown: rgb(126, 61, 0, 0.5);
 }
 @font-face {
     font-family: 'Kenia';
@@ -8,10 +8,29 @@
     font-weight:600;
     font-style:normal;
 }
+html {
+    height:100vh;
+    overflow-y:hidden;
+}
+body{
+    min-height:100%;
+}
+#content {
+    height: 100vh;
+}
+.homepage{
+    height:100%;
+}
+
 body, * {
     box-sizing:border-box;
     margin:0;
     padding:0;
+    font-family:'Kenia';
+}
+.homepage {
+    display:grid;
+    grid-template-rows:minmax(100px, 1fr) 6fr minmax(100px, 1fr);
 }
 .header {
     padding:1em;
@@ -20,14 +39,39 @@ body, * {
     width:100%; 
     justify-items:space-around;
     grid-auto-flow:column;
-    font-family:'Kenia';
 
 }
 .title {
     justify-self:flex-start;
-    font-size:2rem;
+    font-size:max(2.5rem, 2.5vw);
 }
 .normalHeading {
     margin-top:2.5%;
-    font-size:1.5rem;
+    font-size:max(2rem, 2vw);
+}
+
+.main {
+    padding:1em 1.5em;
+    background: linear-gradient(to bottom, var(--yellow), var(--brown));
+}
+.containerOne, .containerTwo {
+    height:50%;
+}
+.containerOne {
+    display:flex;
+}
+.imageOne, .imageTwo {
+    width:clamp(30%, 350px, 45%);
+    height:70%;
+}
+.imageOne {
+    float:right;
+    margin-top:min(200px, 20%);
+}
+.message {
+    margin-top:min(75px, -7%);
+    font-size:max(1.5rem, 2vw);
+    text-align:center;
+    width:70%;
+    align-self:center;
 }
