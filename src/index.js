@@ -19,7 +19,7 @@ function homePage() {
 
     header.append(title, home, menu, contact);
 
-    return header;
+    
 }
 
 document.body.appendChild(homePage());

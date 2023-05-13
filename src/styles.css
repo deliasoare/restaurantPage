@@ -1,0 +1,33 @@
+:root {
+    --yellow: rgba(255, 179, 0, 0.5);
+    --brown: #7E3D00;
+}
+@font-face {
+    font-family: 'Kenia';
+    src:url('./Kenia-Regular.ttf') format('ttf');
+    font-weight:600;
+    font-style:normal;
+}
+body, * {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+.header {
+    padding:1em;
+    background-color: var(--yellow);
+    display:grid;
+    width:100%; 
+    justify-items:space-around;
+    grid-auto-flow:column;
+    font-family:'Kenia';
+
+}
+.title {
+    justify-self:flex-start;
+    font-size:2rem;
+}
+.normalHeading {
+    margin-top:2.5%;
+    font-size:1.5rem;
+}
