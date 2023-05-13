@@ -8,13 +8,6 @@
     font-weight:600;
     font-style:normal;
 }
-html {
-    height:100vh;
-    overflow-y:hidden;
-}
-body{
-    min-height:100%;
-}
 #content {
     height: 100vh;
 }
@@ -30,7 +23,7 @@ body, * {
 }
 .homepage {
     display:grid;
-    grid-template-rows:minmax(100px, 1fr) 6fr minmax(100px, 1fr);
+    grid-template-rows:minmax(100px, 1fr) 3fr 1fr;
 }
 .header {
     padding:1em;
@@ -66,10 +59,10 @@ body, * {
 }
 .imageOne {
     float:right;
-    margin-top:min(200px, 20%);
+    margin-top:min(150px, 20%);
 }
 .message {
-    margin-top:min(75px, -7%);
+    margin-top:min(65px, -7%);
     font-size:max(1.5rem, 2vw);
     text-align:center;
     width:70%;

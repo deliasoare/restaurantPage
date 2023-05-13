@@ -46,7 +46,15 @@ function homePage() {
 
     main.append(containerOne, containerTwo);
 
-    homePage.append(header, main);
+    const footer = document.createElement('div');
+    footer.classList = 'footer';
+
+    const footerText = document.createElement('p');
+    footerText.classList = 'footerText';
+    footerText.textContent = '@deliasoare';
+
+    footer.appendChild(footerText);
+    homePage.append(header, main, footer);
     return homePage;
 }
 
