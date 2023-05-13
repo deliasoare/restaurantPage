@@ -1,6 +1,7 @@
 :root {
     --yellow: rgba(255, 179, 0, 0.5);
     --brown: rgb(126, 61, 0, 0.5);
+    --darkBrown: #591C02;
 }
 @font-face {
     font-family: 'Kenia';
@@ -9,7 +10,7 @@
     font-style:normal;
 }
 html {
-    height:100vh;
+    height:100%;
 }
 #content {
     height: 100%;
@@ -17,7 +18,30 @@ html {
 .homepage{
     height:100vh;
 }
-
+.normalHeading {
+    width:fit-content;
+    border-top: 1px solid var(--brown);
+    border-left: 1px solid var(--brown);
+    border-right: 1px solid var(--brown);
+    padding:0.5em;
+    width:175px;
+    text-align:center;
+    font-size:max(1.8rem, 1.5vw);
+}
+.normalHeading:hover {
+    cursor:pointer;
+    background:var(--darkBrown);
+}
+.normalHeading:hover::after {
+    margin-top:0.75%;
+    margin-left:-15px;
+    position:absolute;
+    content: ' ';
+    width:175px;
+    height:80px;
+    display:block;
+    background: url('./firstSpill.svg');
+}
 body, * {
     box-sizing:border-box;
     margin:0;
@@ -26,7 +50,7 @@ body, * {
 }
 .homepage {
     display:grid;
-    grid-template-rows:1fr 4fr 1fr;
+    grid-template-rows:2fr 4fr 1fr;
 }
 .header {
     padding:.75em;
@@ -41,14 +65,11 @@ body, * {
     justify-self:flex-start;
     font-size:max(2.5rem, 2.5vw);
 }
-.normalHeading {
-    margin-top:2.5%;
-    font-size:max(2rem, 2vw);
-}
+
 
 .main {
     height:85vh;
-    padding:1.5em min(20%, 9rem);
+    padding:1.5em min(10%, 9rem);
     background: linear-gradient(to bottom, var(--yellow), var(--brown));
 }
 .containerOne, .containerTwo {
@@ -63,14 +84,17 @@ body, * {
 }
 .imageOne {
     float:right;
-    margin-top:min(150px, 17%);
+    margin-top:min(120px, 15%);
 }
-.message {
-    margin-top:min(65px, -7%);
+.message, .messageTwo {
+    margin-top:5%;
     font-size:max(1.5rem, 2vw);
     text-align:center;
     width:70%;
     align-self:center;
+}
+.message {
+    margin-top:min(65px, -7%);
 }
 .footer {
     display:flex;
@@ -81,3 +105,8 @@ body, * {
 .footerText {
     font-size: 1.65rem;
 }
+.containerTwo {
+    display:flex;
+    justify-content:space-between;
+}
+
