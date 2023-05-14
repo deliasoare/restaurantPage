@@ -20,6 +20,7 @@ html {
 }
 .normalHeading {
     width:fit-content;
+    height:fit-content;
     border-top: 1px solid var(--brown);
     border-left: 1px solid var(--brown);
     border-right: 1px solid var(--brown);
@@ -50,7 +51,7 @@ body, * {
 }
 .homepage {
     display:grid;
-    grid-template-rows:2fr 4fr 1fr;
+    grid-template-rows:minmax(150px, 2fr) minmax(700px, 4fr) 1fr;
 }
 .header {
     padding:.75em;
@@ -68,9 +69,10 @@ body, * {
 
 
 .main {
-    height:85vh;
     padding:1.5em min(10%, 9rem);
     background: linear-gradient(to bottom, var(--yellow), var(--brown));
+    display:grid;
+    grid-template-rows: minmax(400px, 1fr) minmax(350px, 1fr);
 }
 .containerOne, .containerTwo {
     height:50%;
@@ -80,7 +82,7 @@ body, * {
 }
 .imageOne, .imageTwo {
     width:clamp(30%, 300px, 45%);
-    height:100%;
+    height:150%;
 }
 .imageOne {
     float:right;
