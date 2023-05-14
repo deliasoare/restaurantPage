@@ -1,10 +1,8 @@
 import imageOne from './coffee.jpg';
 import imageTwo from './cafe.jpg';
+import './styles.css';
 
-export default function homePage() {
-    const homePage = document.createElement('div');
-    homePage.classList = 'homepage';
-
+export function header() {
     const header = document.createElement('div');
     header.classList = 'header';
     const title = document.createElement('span');
@@ -22,6 +20,26 @@ export default function homePage() {
     contact.classList = 'contact normalHeading';
 
     header.append(title, home, menu, contact);
+
+    return header;
+}
+
+export function footer() {
+    const footer = document.createElement('div');
+    footer.classList = 'footer';
+
+    const footerText = document.createElement('p');
+    footerText.classList = 'footerText';
+    footerText.textContent = '@deliasoare';
+
+    footer.appendChild(footerText);
+
+    return footer;
+}
+
+export default function homePage() {
+    const homePage = document.createElement('div');
+    homePage.classList = 'homepage';
 
     const main = document.createElement('div');
     main.classList = 'main';
@@ -51,14 +69,7 @@ export default function homePage() {
 
     main.append(containerOne, containerTwo);
 
-    const footer = document.createElement('div');
-    footer.classList = 'footer';
 
-    const footerText = document.createElement('p');
-    footerText.classList = 'footerText';
-    footerText.textContent = '@deliasoare';
-
-    footer.appendChild(footerText);
-    homePage.append(header, main, footer);
+    homePage.append(header(), main, footer());
     return homePage;
 }

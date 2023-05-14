@@ -118,6 +118,7 @@ body, * {
         grid-template-rows:2fr 3fr 0.5fr;
     }
     .header {
+        justify-content:center;
         grid-auto-flow:row;
     }
     .normalHeading {

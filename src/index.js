@@ -1,5 +1,5 @@
 import './styles.css';
-import HomePage from './homepage.js'
+import HomePage from './homepage'
 
 function changeCover(headings) {
     headings.forEach(heading => {

@@ -5,7 +5,8 @@ module.exports = {
     devtool:'inline-source-map',
     entry: {
         index : './src/index.js',
-        homepage: './src/homepage.js'
+        homepage: './src/homepage.js',
+        menu: './src/menu.js',
     },
     output: {
         filename: '[name].main.js',
