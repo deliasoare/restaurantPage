@@ -2,7 +2,15 @@ import imageOne from './coffee.jpg';
 import imageTwo from './cafe.jpg';
 import './styles.css';
 
-export function header() {
+const headings = document.querySelectorAll('.normalHeading');
+
+function removeAllCovers() {
+    headings.forEach(heading => {
+        heading.classList.remove('cover');
+    })
+}
+
+export function header(cover) {
     const header = document.createElement('div');
     header.classList = 'header';
     const title = document.createElement('span');
@@ -11,13 +19,20 @@ export function header() {
     const home = document.createElement('span');
     home.textContent = 'HOME';
     home.classList = 'home normalHeading';
-    home.classList.add('cover');
+    removeAllCovers();
+    console.log(cover);
+    if (cover === "home")
+        home.classList.add('cover');
     const menu = document.createElement('span');
     menu.textContent = 'MENU';
     menu.classList = 'menu normalHeading';
+    if (cover === 'menu')
+        menu.classList.add('cover');
     const contact = document.createElement('span');
     contact.textContent = 'CONTACT';
     contact.classList = 'contact normalHeading';
+    if (cover === "contact")
+        contact.classList.add('cover');
 
     header.append(title, home, menu, contact);
 
@@ -39,7 +54,7 @@ export function footer() {
 
 export default function homePage() {
     const homePage = document.createElement('div');
-    homePage.classList = 'homepage';
+    homePage.classList = 'homepage page';
 
     const main = document.createElement('div');
     main.classList = 'main';
@@ -70,6 +85,6 @@ export default function homePage() {
     main.append(containerOne, containerTwo);
 
 
-    homePage.append(header(), main, footer());
+    homePage.append(header('home'), main, footer());
     return homePage;
 }

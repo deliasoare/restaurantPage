@@ -15,7 +15,7 @@ html {
 #content {
     height: 100%;
 }
-.homepage{
+.page{
     height:100vh;
 }
 .normalHeading {
@@ -50,7 +50,7 @@ body, * {
     padding:0;
     font-family:'Kenia';
 }
-.homepage {
+.page {
     display:grid;
     grid-template-rows:minmax(150px, 2fr) minmax(700px, 4fr) 0.5fr;
 }
@@ -114,7 +114,7 @@ body, * {
 }
 
 @media (max-width:700px) {
-    .homepage {
+    .page {
         grid-template-rows:2fr 3fr 0.5fr;
     }
     .header {

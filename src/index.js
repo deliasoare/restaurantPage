@@ -1,25 +1,32 @@
 import './styles.css';
-import HomePage from './homepage'
+import homePage from './homepage';
+import menuPage from './menu';
 
-function changeCover(headings) {
-    headings.forEach(heading => {
-        heading.addEventListener('click', () => {
-            headings.forEach(heading2 => {
-                if (heading === heading2)
-                    heading2.classList.add('cover');
-                else
-                    heading2.classList.remove('cover');
-            })
-        })
-    })
+const output = document.querySelector('#content');
+
+
+
+
+function loadPage(page) {
+    output.innerHTML = '';
+    if (page === 'home')
+        output.appendChild(homePage());
+    else if (page === 'menu')
+        output.appendChild(menuPage());
+    else
+        output.appendChild(contactPage());
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const output = document.querySelector('#content')
-    output.appendChild(HomePage());
-    
-    const headings = document.querySelectorAll('.normalHeading');
-
-    changeCover(headings);
+document.addEventListener('click', (e) => {
+    if (e.target === document.querySelector('.home'))
+        loadPage('home');
+    else if (e.target === document.querySelector('.menu'))
+        loadPage('menu');
+    else if (e.target === document.querySelector('.contact'))
+        loadPage('contact');
 })
+window.onload = function() {
+
+    output.appendChild(homePage('home'));
+    
+}
