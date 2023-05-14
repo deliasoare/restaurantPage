@@ -31,7 +31,7 @@ html {
     cursor:pointer;
 }
 .cover {
-    background:var(--darkBrown);
+    background: linear-gradient(#e5ad74 35%, #6f280f 65%);
 }
 .cover::after, .cover::after {
     pointer-events:none;
