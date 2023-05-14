@@ -33,7 +33,8 @@ html {
     cursor:pointer;
     background:var(--darkBrown);
 }
-.normalHeading:hover::after {
+.normalHeading:hover::after, .normalHeading:active::after {
+    pointer-events:none;
     margin-top:0.75%;
     margin-left:-15px;
     position:absolute;
@@ -112,3 +113,23 @@ body, * {
     justify-content:space-between;
 }
 
+@media (max-width:700px) {
+    .homepage {
+        grid-template-rows:2fr 3fr 1fr;
+    }
+    .header {
+        grid-auto-flow:row;
+    }
+    .normalHeading {
+        border-right:none;
+        margin-top:4%;
+    }
+    .imageOne {
+        float:left;
+        margin-top:0;
+    } 
+    .message, .messageTwo {
+        margin-top:0;
+    }
+
+}
