@@ -28,14 +28,14 @@ html {
     width:175px;
     text-align:center;
     font-size:max(1.8rem, 1.5vw);
-}
-.normalHeading:hover {
     cursor:pointer;
+}
+.cover {
     background:var(--darkBrown);
 }
-.normalHeading:hover::after, .normalHeading:active::after {
+.cover::after, .cover::after {
     pointer-events:none;
-    margin-top:0.75%;
+    margin-top:0.70%;
     margin-left:-15px;
     position:absolute;
     content: ' ';

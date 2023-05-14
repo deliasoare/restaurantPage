@@ -2,6 +2,9 @@ import './styles.css';
 import imageOne from './coffee.jpg';
 import imageTwo from './cafe.jpg';
 
+
+const headings = [document.querySelectorAll('.normalHeading')];
+
 function homePage() {
     const homePage = document.createElement('div');
     homePage.classList = 'homepage';
@@ -14,6 +17,7 @@ function homePage() {
     const home = document.createElement('span');
     home.textContent = 'HOME';
     home.classList = 'home normalHeading';
+    home.classList.add('cover');
     const menu = document.createElement('span');
     menu.textContent = 'MENU';
     menu.classList = 'menu normalHeading';
