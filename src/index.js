@@ -3,8 +3,6 @@ import imageOne from './coffee.jpg';
 import imageTwo from './cafe.jpg';
 
 
-const headings = [document.querySelectorAll('.normalHeading')];
-
 function homePage() {
     const homePage = document.createElement('div');
     homePage.classList = 'homepage';
@@ -67,5 +65,21 @@ function homePage() {
     return homePage;
 }
 
-const output = document.querySelector('#content')
-output.appendChild(homePage());
+
+document.addEventListener('DOMContentLoaded', () => {
+    const output = document.querySelector('#content')
+    output.appendChild(homePage());
+    
+    const headings = document.querySelectorAll('.normalHeading');
+
+    headings.forEach(heading => {
+        heading.addEventListener('click', () => {
+            headings.forEach(heading2 => {
+                if (heading === heading2)
+                    heading2.classList.add('cover');
+                else
+                    heading2.classList.remove('cover');
+            })
+        })
+    })
+})
