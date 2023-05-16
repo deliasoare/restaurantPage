@@ -1,6 +1,6 @@
 :root {
-    --yellow: rgba(255, 179, 0, 0.5);
-    --brown: rgb(126, 61, 0, 0.5);
+    --yellow: rgba(224, 172, 60);;
+    --brown: rgb(170, 108, 60);
     --darkBrown: #591C02;
 }
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
@@ -39,6 +39,9 @@ html {
     display:block;
     background: url('./firstSpill.svg');
 }
+html {
+    background-color:var(--brown);
+}
 body, * {
     box-sizing:border-box;
     margin:0;
@@ -46,6 +49,7 @@ body, * {
     font-family:'Lobster';
     font: weight 1500px;;
 }
+
 .page {
     display:grid;
     grid-template-rows:minmax(150px, 2fr) minmax(700px, 4fr) 0.5fr;
@@ -69,6 +73,8 @@ body, * {
 .main, .mainMenu {
     padding:1.5em min(10%, 9rem);
     background: linear-gradient(to bottom, var(--yellow), var(--brown));
+}
+.main {
     display:grid;
     grid-template-rows: minmax(400px, 1fr) minmax(350px, 1fr);
 }
@@ -115,21 +121,6 @@ body, * {
 .message {
     margin-top:min(65px, -7%);
 }
-.menuButton {
-    margin:0 auto;
-    display:block;
-    padding:0.5em 1.5em;
-    border-radius:13px;
-    border:3px solid var(--darkBrown);
-    font-size:1.5rem;
-    background:linear-gradient(0deg,rgb(250, 211, 122), transparent) #BE9E7F;
-    margin-top: min(30px, 5%);
-    transition:background-color 1s;
-}
-.menuButton:hover, .menuButton:focus {
-    cursor:pointer;
-    background-color: var(--darkBrown);
-}
 .footer {
     display:flex;
     justify-content:center;
@@ -164,7 +155,33 @@ body, * {
         margin-top:0;
     }
 }
-
+.mainMenu {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.products {
+    margin:1em;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows:repeat(auto-fit, minmax(200px, 1fr));
+}
+.productCont {
+    background:var(--yellow);
+    display:grid;
+    place-items:center;
+    max-width:350px;
+}
+.product {
+    background:rgba(0, 0, 0, 0.6);
+    width:90%;
+    height:90%;
+}
+.backgroundMenu {
+    width:80%;
+    height:70%;
+    background:rgba(0, 0, 0, 0.6)
+}
 @media (max-width:550px) {
     .containerOne, .containerTwo {
         flex-direction:column;
@@ -181,5 +198,8 @@ body, * {
     .imageOne, .imageTwo {
         height:auto;
         width:80%;
+    }
+    .backgroundMenu {
+        background:transparent;
     }
 }
