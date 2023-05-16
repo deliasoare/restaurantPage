@@ -11,25 +11,23 @@ module.exports = {
     output: {
         filename: '[name].main.js',
         path: path.resolve(__dirname, 'dist'),
+        clean:true
     },
     module: {
         rules: [
             {
                 test: /\.css$/i,
+                exclude: '/node-modules/',
                 use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-                use: [
+                type:'asset/resource',
+                exclude:'/node-modules/',
+                use: 
                     {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'fonts/'
-                        }
+                    loader: 'url-loader',
                     }
-                ]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,

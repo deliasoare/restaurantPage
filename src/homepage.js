@@ -69,18 +69,31 @@ export default function homePage() {
 
     const containerOne = document.createElement('div');
     containerOne.classList = 'containerOne';
+
+    const imageContainerOne = document.createElement('div');
+    imageContainerOne.classList = 'imageOne';
     const image1 = new Image();
     image1.src = imageOne;
-    image1.classList = 'imageOne';
+    image1.classList = 'actualImageOne';
+    const decoImg1 = document.createElement('div');
+    decoImg1.classList = 'decoOne';
 
-    containerOne.append(message, image1);
+    imageContainerOne.append(decoImg1, image1);
+    containerOne.append(message, imageContainerOne);
 
     const containerTwo = document.createElement('div');
     containerTwo.classList = 'containerTwo';
+    
+    const imageContainerTwo = document.createElement('div');
     const image2 = new Image();
     image2.src = imageTwo;
-    image2.classList = 'imageTwo';
-    containerTwo.append(image2, message2);
+    image2.classList ='actualImageTwo';
+    imageContainerTwo.classList = 'imageTwo';
+    const decoImg2 = document.createElement('div');
+    decoImg2.classList = 'decoTwo';
+
+    imageContainerTwo.append(decoImg2, image2);
+    containerTwo.append(imageContainerTwo, message2);
 
     main.append(containerOne, containerTwo);
 
