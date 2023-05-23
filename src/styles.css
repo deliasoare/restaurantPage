@@ -1,17 +1,21 @@
 :root {
-    --yellow: rgba(224, 172, 60);;
-    --brown: rgb(170, 108, 60);
+    --yellow: rgba(255,217,127,255);
+    --brown: rgba(190,158,127,255);
     --darkBrown: #591C02;
 }
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-html {
+html, body {
     height:100%;
+    background : var(--brown);
 }
 #content {
     height: 100%;
 }
-.page{
+.homepage{
     height:100vh;
+}
+.menuPage {
+    min-height:100%;
 }
 .normalHeading {
     width:fit-content;
@@ -39,20 +43,19 @@ html {
     display:block;
     background: url('./firstSpill.svg');
 }
-html {
-    background-color:var(--brown);
-}
+
 body, * {
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:'Lobster';
-    font: weight 1500px;;
+    font-family: 'Lobster';
+    font-weight:lighter;
+
 }
 
 .page {
     display:grid;
-    grid-template-rows:minmax(150px, 2fr) minmax(700px, 4fr) 0.5fr;
+    grid-template-rows:150px minmax(700px, 4fr) minmax(100px, 1fr);
 }
 .header {
     font-weight:bolder;
@@ -81,21 +84,19 @@ body, * {
 .containerOne, .containerTwo {
     color:var(--darkBrown);
     font-weight:bolder;
-    height:50%;
 }
 .containerOne {
     display:flex;
 }
 .imageOne, .imageTwo {
-    width:clamp(30%, 300px, 45%);
-    height:150%;
-
+    width:clamp(25%, 200px, 40%);
+    z-index:1;
     position:relative;
 }
 .actualImageTwo, .actualImageOne {
-    width:100%;
-    height:100%;
     position:relative;
+    height:100%;
+    width:100%;
     margin-top:5%;
 }
 .decoOne, .decoTwo {
@@ -107,16 +108,28 @@ body, * {
     left:20%;
     border:0.5px solid var(--darkBrown);
 }
+.menuButton {
+    background: linear-gradient(to top, var(--yellow), var(--brown));
+    padding:1.2em;
+    border-radius:14px;
+    font-size:1.2rem;
+    border:none;
+    cursor:pointer;
+    margin-top:-5%;
+}
 .imageOne {
     float:right;
     margin-top:min(120px, 15%)
 }
 .message, .messageTwo {
-    margin-top:5%;
+    margin-top:-20%;
     font-size:max(1.5rem, 2vw);
     text-align:center;
     width:70%;
     align-self:center;
+}
+.preMessage {
+    font-size:6rem;
 }
 .message {
     margin-top:min(65px, -7%);
@@ -126,16 +139,27 @@ body, * {
     justify-content:center;
     align-items:flex-start;
     background: var(--brown);
+    position:relative;
+    z-index:1--;
 }
 .footerText {
     font-size: 1.65rem;
+    position:absolute;
+    bottom:0;
 }
 .containerTwo {
     display:flex;
     justify-content:space-between;
 }
+.buttonContainer {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-@media (max-width:700px) {
+}
+
+@media (max-width:750px) {
     .page {
         grid-template-rows:2fr 3fr 0.5fr;
     }
@@ -151,8 +175,8 @@ body, * {
         float:left;
         margin-top:0;
     } 
-    .message, .messageTwo {
-        margin-top:0;
+    .message {
+        margin-top:-20%;
     }
 }
 .mainMenu {
@@ -164,7 +188,9 @@ body, * {
     margin:1em;
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows:repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows:repeat(auto-fit, minmax(350px, 1fr));
+    gap:5%;
+    width:100%;
 }
 .productCont {
     background:var(--yellow);
@@ -176,13 +202,25 @@ body, * {
     background:rgba(0, 0, 0, 0.6);
     width:90%;
     height:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:column;
+    position:relative;
 }
-.backgroundMenu {
-    width:80%;
-    height:70%;
-    background:rgba(0, 0, 0, 0.6)
+
+.productImg {
+    width:100%;
+    position:absolute;
+    top: 0;
+    max-height:150px;
 }
-@media (max-width:550px) {
+.productTitle, .productPrice {
+    text-align:center;
+    font-size:1.5rem;
+    color:var(--yellow);
+}
+@media (max-width:750px) {
     .containerOne, .containerTwo {
         flex-direction:column;
         height:100%;
@@ -201,5 +239,16 @@ body, * {
     }
     .backgroundMenu {
         background:transparent;
+    }
+}
+
+@media (min-width:500px) {
+    @media (max-width:750px) {
+        .imageOne, .imageTwo {
+            width:65%;
+        }
+        .menuButton {
+            margin-top: -9%;
+        }
     }
 }

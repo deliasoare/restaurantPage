@@ -58,12 +58,16 @@ export default function homePage() {
 
     const main = document.createElement('div');
     main.classList = 'main';
-    let message = document.createElement('p');
-    message.innerHTML = "Are you ready to taste the best coffee in town?"
+    const message = document.createElement('p');
+    const preMessage = document.createElement('span');
+    preMessage.textContent = 'A';
+    preMessage.classList = 'preMessage';
+    message.innerHTML = "re you ready to taste THE best coffee?"
     message.classList = 'message';
+    message.prepend(preMessage);
 
     const message2 = document.createElement('p');
-    message2.textContent = "It's just a couple clicks away!";
+    message2.textContent = "";
     message2.classList = 'messageTwo';
 
 
@@ -92,8 +96,15 @@ export default function homePage() {
     const decoImg2 = document.createElement('div');
     decoImg2.classList = 'decoTwo';
 
+    const buttonContainer = document.createElement('div');
+    const button = document.createElement('button');
+    button.classList = 'menuButton';
+    button.textContent = 'CHECK IT OUT';
+    buttonContainer.classList = 'buttonContainer';
+    buttonContainer.append(button);
+
     imageContainerTwo.append(decoImg2, image2);
-    containerTwo.append(imageContainerTwo, message2);
+    containerTwo.append(imageContainerTwo, buttonContainer);
 
     main.append(containerOne, containerTwo);
 
