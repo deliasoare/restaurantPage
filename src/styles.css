@@ -2,6 +2,7 @@
     --yellow: rgba(255,217,127,255);
     --brown: rgba(190,158,127,255);
     --darkBrown: #591C02;
+    --transpdarkBrown: rgba(89, 28, 2, 0.5);
 }
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html, body {
@@ -89,7 +90,8 @@ body, * {
     display:flex;
 }
 .imageOne, .imageTwo {
-    width:clamp(25%, 200px, 40%);
+    min-width:150px;
+    max-height:350px;
     z-index:1;
     position:relative;
 }
@@ -107,12 +109,15 @@ body, * {
     top:-20%;
     left:20%;
     border:0.5px solid var(--darkBrown);
+    background:var(--transpdarkBrown);
+
 }
+
 .menuButton {
     background: linear-gradient(to top, var(--yellow), var(--brown));
-    padding:1.2em;
+    padding:1.4em;
     border-radius:14px;
-    font-size:1.2rem;
+    font-size:1.4rem;
     border:none;
     cursor:pointer;
     margin-top:-5%;
@@ -249,6 +254,16 @@ body, * {
         }
         .menuButton {
             margin-top: -9%;
+            font-size:1.2rem;
         }
+    }
+}
+@media (max-width:900px) and (min-width:750px) {
+    .imageOne, .imageTwo {
+        max-width:270px;
+        margin-top:-2%;
+    }
+    .menuButton{
+        font-size:1.3rem;
     }
 }
