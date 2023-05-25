@@ -36,6 +36,19 @@ function addProduct(image, title, price) {
     return productContainer;
 
 }
+function addOption(title) {
+    const li = document.createElement('li');
+    const option = document.createElement('div');
+    const icon = document.createElement('div');
+    icon.classList = 'icon';
+    const para = document.createElement('p');
+    para.textContent = title;
+    option.classList = `option ${title}`;
+    option.append(icon, para);
+    li.append(option);
+
+    return li;
+}
 export default function menuScreen() {
     const menu = document.createElement('div');
     menu.classList = 'menuPage page';
@@ -43,9 +56,14 @@ export default function menuScreen() {
     const selectContainer = document.createElement('div');
     selectContainer.classList = 'selectCont';
 
-    const select = document.createElement('select');
-    
-    selectContainer.append(select);
+    const def = document.createElement('ul');
+    def.classList = 'default_option';
+    const select = document.createElement('ul');
+    select.classList = 'select_ul';
+    def.append(addOption('Coffee'));
+    select.append(addOption('Other Beverages'),
+    addOption('Dessert'), addOption('Add Ons'));
+    selectContainer.append(def, select);
 
     const mainMenu = document.createElement('div');
     mainMenu.classList = 'mainMenu';

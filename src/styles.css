@@ -3,6 +3,7 @@
     --brown: rgba(190,158,127,255);
     --darkBrown: #591C02;
     --transpdarkBrown: rgba(89, 28, 2, 0.5);
+    --middarkBrown: rgba(89, 28, 2, 0.75);
 }
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html, body {
@@ -108,7 +109,6 @@ body, * {
     position:absolute;
     top:-20%;
     left:20%;
-    border:0.5px solid var(--darkBrown);
     background:var(--transpdarkBrown);
 
 }
@@ -265,11 +265,79 @@ body, * {
         font-size:1.3rem;
     }
 }
-/* special constraint for <550px */
 .selectCont {
     position:absolute;
     width:20%;
     left:0;
     display:flex;
     justify-content:center;
+    height:fit-content;
 }
+
+.default_option {
+    background:white;
+    border-radius:5px;
+    position:absolute;
+    cursor:pointer;
+    width: 80%;
+}
+
+.default_option li {
+    padding: 10px 20px;
+}
+
+.default_option:hover::after {
+    content:"\2304";
+    position:absolute;
+    min-width:70px;
+    left:110%;
+    top:15%;
+    font-weight:bolder;
+    font-size:1.6rem;
+}
+ul {
+    list-style:none;
+}
+.select_ul {
+    position:absolute;
+    top: 85px;
+    width: 80%;
+    background: white;
+    border-radius: 5px;
+    display:none;
+}
+
+.select_ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.select_ul li:first-child:hover {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+.select_ul li:last-child:hover {
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.select_ul li:hover {
+    background:var(--darkBrown);
+}
+.option {
+    display:flex;
+    align-items:center;
+}
+.option .icon {
+    background : url("Coffee.svg") no-repeat 0 0;
+    width: 50%;
+    height:60px;
+    margin-right: 5px;
+}
+.select_ul {
+    display:block;
+}
+.default_option::before {
+    top: 25px;
+    transform: rotate(-225deg);
+}
+
