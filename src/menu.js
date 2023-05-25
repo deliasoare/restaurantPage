@@ -3,9 +3,8 @@ import {header, footer} from './homepage';
 import EspressoImg from './espresso.png';
 import CaffeLatteImg from './cafeLatte.png';
 import CappucinoImg from './capp.png';
-import AmericanoImg from './americano.jpg';
+import AmericanoImg from './americano.png';
 import caramelMacchImg from './caramelMacchiato.png';
-import frappeLatteImg from './frappeLatte.png';
 import irishImg from './irishCoffee.png';
 
 
@@ -48,7 +47,12 @@ export default function menuScreen() {
     const products = document.createElement('div');
     products.classList = 'products';    
 
-    products.append(addProduct(EspressoImg, 'Espresso', 5), addProduct(CaffeLatteImg, 'Caffe Latte', 5), addProduct(CappucinoImg, 'Cappucino', 6));
+    products.append(addProduct(EspressoImg, 'Espresso', 5), 
+    addProduct(CaffeLatteImg, 'Caffe Latte', 5),
+    addProduct(CappucinoImg, 'Cappucino', 6),
+    addProduct(AmericanoImg, 'Americano Coffee', 5),
+    addProduct(caramelMacchImg, 'Caramel Macchiato', 7),
+    addProduct(irishImg, 'Irish Coffee', 5));
 
 
     mainMenu.append(products);
