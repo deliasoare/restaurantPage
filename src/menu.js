@@ -59,7 +59,7 @@ export default function menuScreen() {
     const def = document.createElement('ul');
     def.classList = 'default_option';
     const select = document.createElement('ul');
-    select.classList = 'select_ul';
+    select.classList = 'select_ul inactive';
     def.append(addOption('Coffee'));
     select.append(addOption('Other Beverages'),
     addOption('Dessert'), addOption('Add Ons'));

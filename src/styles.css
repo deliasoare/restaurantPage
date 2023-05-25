@@ -270,21 +270,28 @@ body, * {
     width:20%;
     left:0;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    align-items:center;
     height:fit-content;
 }
 
 .default_option {
     background:white;
     border-radius:5px;
-    position:absolute;
+    position:relative;
     cursor:pointer;
     width: 80%;
+    height:fit-content;
+    padding: 10px 20px;
+    display:block;
+}
+.inactive {
+    display:none;
+}
+.active {
+    display:block;
 }
 
-.default_option li {
-    padding: 10px 20px;
-}
 
 .default_option:hover::after {
     content:"\2304";
@@ -299,12 +306,11 @@ ul {
     list-style:none;
 }
 .select_ul {
-    position:absolute;
-    top: 85px;
+    position:relative;
     width: 80%;
     background: white;
     border-radius: 5px;
-    display:none;
+    margin-top:2%;
 }
 
 .select_ul li {
@@ -333,9 +339,7 @@ ul {
     height:60px;
     margin-right: 5px;
 }
-.select_ul {
-    display:block;
-}
+
 .default_option::before {
     top: 25px;
     transform: rotate(-225deg);
