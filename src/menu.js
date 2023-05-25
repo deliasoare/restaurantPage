@@ -1,8 +1,12 @@
 
 import {header, footer} from './homepage';
-import EspressoImg from './espresso.jpg';
-import CaffeLatteImg from './caffeLatte.jpg';
-import CappucinoImg from './cappuccino.jpg';
+import EspressoImg from './espresso.png';
+import CaffeLatteImg from './cafeLatte.png';
+import CappucinoImg from './capp.png';
+import AmericanoImg from './americano.jpg';
+import caramelMacchImg from './caramelMacchiato.png';
+import frappeLatteImg from './frappeLatte.png';
+import irishImg from './irishCoffee.png';
 
 
 
