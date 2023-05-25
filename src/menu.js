@@ -40,6 +40,13 @@ export default function menuScreen() {
     const menu = document.createElement('div');
     menu.classList = 'menuPage page';
 
+    const selectContainer = document.createElement('div');
+    selectContainer.classList = 'selectCont';
+
+    const select = document.createElement('select');
+    
+    selectContainer.append(select);
+
     const mainMenu = document.createElement('div');
     mainMenu.classList = 'mainMenu';
 
@@ -55,7 +62,7 @@ export default function menuScreen() {
     addProduct(irishImg, 'Irish Coffee', 5));
 
 
-    mainMenu.append(products);
+    mainMenu.append(selectContainer, products);
 
 
     menu.append(header('menu'), mainMenu, footer());

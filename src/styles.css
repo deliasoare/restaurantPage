@@ -265,3 +265,11 @@ body, * {
         font-size:1.3rem;
     }
 }
+/* special constraint for <550px */
+.selectCont {
+    position:absolute;
+    width:20%;
+    left:0;
+    display:flex;
+    justify-content:center;
+}
