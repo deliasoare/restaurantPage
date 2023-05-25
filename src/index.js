@@ -20,7 +20,7 @@ function loadPage(page) {
 document.addEventListener('click', (e) => {
     if (e.target === document.querySelector('.home'))
         loadPage('home');
-    else if (e.target === document.querySelector('.menu'))
+    else if (e.target === document.querySelector('.menu') || e.target === document.querySelector('.menuButton'))
         loadPage('menu');
     else if (e.target === document.querySelector('.contact'))
         loadPage('contact');
