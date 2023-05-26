@@ -1,6 +1,7 @@
 import './styles.css';
 import homePage from './homepage';
 import menuPage from './menu';
+import contactPage from './contact';
 import {addOption} from './menu';
 
 const output = document.querySelector('#content');

@@ -20,7 +20,6 @@ export function header(cover) {
     home.textContent = 'HOME';
     home.classList = 'home normalHeading';
     removeAllCovers();
-    console.log(cover);
     if (cover === "home")
         home.classList.add('cover');
     const menu = document.createElement('span');
@@ -33,6 +32,8 @@ export function header(cover) {
     contact.classList = 'contact normalHeading';
     if (cover === "contact")
         contact.classList.add('cover');
+    console.log(cover);
+
 
     header.append(title, home, menu, contact);
 
