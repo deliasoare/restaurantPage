@@ -31,6 +31,9 @@ html, body {
     font-size:max(1.8rem, 1.5vw);
     cursor:pointer;
 }
+.normalHeading, .title, .footer,  .menuButton {
+    color: var(--darkBrown);
+}
 .cover {
     background: linear-gradient(#e5ad74 35%, #6f280f 65%);
 }
@@ -217,6 +220,7 @@ body, * {
 .productTitle, .productPrice {
     text-align:center;
     font-size:1.5rem;
+    color: var(--yellow);
 }
 .productImg {
     max-height:250px;
@@ -332,6 +336,7 @@ ul {
 .option {
     display:flex;
     align-items:center;
+    color: var(--yellow);
 }
 .option .icon {
     background : url("Coffee.svg") no-repeat 0 0;
