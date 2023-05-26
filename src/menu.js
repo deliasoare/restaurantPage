@@ -106,6 +106,7 @@ export default function menuScreen() {
         })
      }, 0);
 
+     
 
     mainMenu.append(selectContainer, products);
 

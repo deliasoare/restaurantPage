@@ -49,6 +49,9 @@ document.addEventListener('click', (e) => {
                 select.classList = 'select_ul active';
             else
                 select.classList = 'select_ul inactive';
+        else 
+            select.classList = 'select_ul inactive';
+
 
         options.forEach(option => {
             if (e.target === option || e.target === option.children[0] || e.target === option.children[1]) 
@@ -56,7 +59,6 @@ document.addEventListener('click', (e) => {
         })
     }
 })
-
 
 
 window.onload = function() {
