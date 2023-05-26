@@ -43,7 +43,12 @@ function addOption(title) {
     icon.classList = 'icon';
     const para = document.createElement('p');
     para.textContent = title;
-    option.classList = `option ${title}`;
+    if (title.includes(' ')) {
+        let s = title.split(' ');
+        option.classList = `option ${s[0] + s[1]}`;
+    }
+    else
+        option.classList = `option ${title}`;
     option.append(icon, para);
     li.append(option);
 

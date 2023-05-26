@@ -335,8 +335,7 @@ ul {
 }
 .option .icon {
     background : url("Coffee.svg") no-repeat 0 0;
-    width: 50%;
-    height:60px;
+    width:fit-content;
     margin-right: 5px;
 }
 
