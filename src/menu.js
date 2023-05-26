@@ -7,7 +7,16 @@ import AmericanoImg from './americano.png';
 import caramelMacchImg from './caramelMacchiato.png';
 import irishImg from './irishCoffee.png';
 
-
+export const prod = {
+    Coffee: [
+        addProduct(EspressoImg, 'Espresso', 5), 
+        addProduct(CaffeLatteImg, 'Caffe Latte', 5),
+        addProduct(CappucinoImg, 'Cappucino', 6),
+        addProduct(AmericanoImg, 'Americano Coffee', 5),
+        addProduct(caramelMacchImg, 'Caramel Macchiato', 7),
+        addProduct(irishImg, 'Irish Coffee', 5) 
+        ]
+}
 
 function addProduct(image, title, price) {
     const productContainer = document.createElement('div');
@@ -36,6 +45,8 @@ function addProduct(image, title, price) {
     return productContainer;
 
 }
+
+
 export function addOption(title) {
     const li = document.createElement('li');
     const option = document.createElement('div');
@@ -75,14 +86,25 @@ export default function menuScreen() {
 
 
     const products = document.createElement('div');
-    products.classList = 'products';    
-
-    products.append(addProduct(EspressoImg, 'Espresso', 5), 
-    addProduct(CaffeLatteImg, 'Caffe Latte', 5),
-    addProduct(CappucinoImg, 'Cappucino', 6),
-    addProduct(AmericanoImg, 'Americano Coffee', 5),
-    addProduct(caramelMacchImg, 'Caramel Macchiato', 7),
-    addProduct(irishImg, 'Irish Coffee', 5));
+    products.classList = 'products';  
+    
+    function changeMenuOption(options) {
+        products.innerHTML = '';
+        prod[options].forEach(opt => {
+            products.append(opt);
+        })
+    }
+    
+     changeMenuOption("Coffee");
+     setTimeout(function() {
+        const options = document.querySelectorAll('.option');
+        options.forEach(option => {
+            console.log('got here');
+            option.addEventListener('click', () => {
+                changeMenuOption(option.textContent);
+            })
+        })
+     }, 0);
 
 
     mainMenu.append(selectContainer, products);
