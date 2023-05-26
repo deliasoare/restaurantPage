@@ -75,6 +75,7 @@ body, * {
 .title {
     justify-self:flex-start;
     font-size:max(2.5rem, 2.5vw);
+    cursor:pointer;
 }
 
 
@@ -88,7 +89,6 @@ body, * {
 }
 .containerOne, .containerTwo {
     color:var(--darkBrown);
-    font-weight:bolder;
 }
 .containerOne {
     display:flex;
@@ -339,14 +339,19 @@ ul {
     color: var(--yellow);
 }
 .option .icon {
-    background : url("Coffee.svg") no-repeat 0 0;
     width:50%;
     min-height:50px;
     margin-right: 5px;
+}
+.Coffee > .icon {
+    background : url("Coffee.svg") no-repeat 0 0;
+}
+
+.OtherBeverages > .icon {
+    background : no-repeat 0 0; 
 }
 
 .default_option::before {
     top: 25px;
     transform: rotate(-225deg);
 }
-
