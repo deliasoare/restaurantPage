@@ -410,6 +410,9 @@ ul {
     text-align:center;
     gap:10%;
 }
+.contactContainer > div {
+    line-height:200%;
+}
 .heading {
     font-size:2rem;
 }
