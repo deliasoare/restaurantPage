@@ -208,6 +208,7 @@ body, * {
 }
 .productCont:hover {
     transform:scale(1.1);
+    box-shadow:5px 5px 5px var(--darkBrown);
 }
 .productCont:hover::after {
     content:' ';
@@ -285,6 +286,7 @@ body, * {
     position:relative;
     cursor:pointer;
     width: 80%;
+    max-width:250px;
     height:fit-content;
     padding: 10px 20px;
     display:block;
@@ -295,7 +297,6 @@ body, * {
 .active {
     display:block;
 }
-
 
 .default_option:hover::after {
     content:"\2304";
@@ -312,6 +313,7 @@ ul {
 .select_ul {
     position:relative;
     width: 80%;
+    max-width:250px;
     background: var(--transpdarkBrown);
     border-radius: 5px;
     margin-top:2%;
@@ -347,10 +349,7 @@ ul {
 .Coffee > .icon {
     background : url("Coffee.svg") no-repeat 0 0;
 }
-.option > .p {
-    width:100%;
-    text-align:center;
-}
+
 .OtherBeverages > .icon {
     background : url("beverage.svg") no-repeat 0 0; 
 }

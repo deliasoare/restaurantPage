@@ -6,6 +6,13 @@ import CappucinoImg from './capp.png';
 import AmericanoImg from './americano.png';
 import caramelMacchImg from './caramelMacchiato.png';
 import irishImg from './irishCoffee.png';
+import Mojito from './Mojito.png';
+import PinaColada from './pinaColada.png';
+import Slushie from './Slushie.png';
+import StrawberryMilkshake from './strawberryMilkshake.png';
+import Water from './water.png';
+import WatermelonLemonade from './watermelonLemonade.png';
+import Coke from './coke.png';
 
 export const prod = {
     Coffee: [
@@ -15,7 +22,16 @@ export const prod = {
         addProduct(AmericanoImg, 'Americano Coffee', 5),
         addProduct(caramelMacchImg, 'Caramel Macchiato', 7),
         addProduct(irishImg, 'Irish Coffee', 5) 
-        ]
+        ],
+    "Other Beverages": [
+        addProduct(Water, 'Water', 3),
+        addProduct(Coke, 'Coke', 4),
+        addProduct(WatermelonLemonade, "Watermelon Lemonade", 8),
+        addProduct(StrawberryMilkshake, 'Strawberry Milkshake', 9),
+        addProduct(Slushie, 'Slushie', 7),
+        addProduct(Mojito, 'Mojito', 9),
+        addProduct(PinaColada, 'Pina Colada', 9)
+    ]
 }
 
 function addProduct(image, title, price) {
