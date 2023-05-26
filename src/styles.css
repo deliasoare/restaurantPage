@@ -336,22 +336,31 @@ ul {
 .option {
     display:flex;
     align-items:center;
+    justify-content:space-between;
     color: var(--yellow);
 }
 .option .icon {
-    width:50%;
+    width:60px;
     min-height:50px;
     margin-right: 5px;
 }
 .Coffee > .icon {
     background : url("Coffee.svg") no-repeat 0 0;
 }
-
-.OtherBeverages > .icon {
-    background : no-repeat 0 0; 
+.option > .p {
+    width:100%;
+    text-align:center;
 }
-
+.OtherBeverages > .icon {
+    background : url("beverage.svg") no-repeat 0 0; 
+}
+.Dessert > .icon {
+    background: url('dessert.svg') no-repeat 0 0;
+}
 .default_option::before {
     top: 25px;
     transform: rotate(-225deg);
+}
+.AddOns > .icon {
+    background: url('misc.svg') no-repeat 0 0;
 }
