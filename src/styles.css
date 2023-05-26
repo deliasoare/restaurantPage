@@ -226,11 +226,7 @@ body, * {
 .productImg {
     max-height:250px;
 }
-@media (max-width:1300px) {
-    .products {
-        grid-template-columns:repeat(1, minmax(250px, 1fr));
-    }
-}
+
 @media (max-width:750px) {
     .containerOne, .containerTwo {
         flex-direction:column;
@@ -317,7 +313,7 @@ ul {
     max-width:250px;
     background: var(--transpdarkBrown);
     border-radius: 5px;
-    margin-top:2%;
+    margin-top:0.5%;
 }
 
 .select_ul li {
@@ -363,4 +359,30 @@ ul {
 }
 .AddOns > .icon {
     background: url('misc.svg') no-repeat 0 0;
+}
+@media (max-width:1300px) {
+    .products {
+        grid-template-columns:repeat(1, minmax(250px, 1fr));
+    }
+    .mainMenu {
+        display:flex;
+        justify-content:flex-start;
+        align-content:center;
+        flex-wrap:wrap;
+        align-items:center;
+        flex-direction:column;
+    }
+    .selectCont {
+        position:relative;
+        width:100%;
+    }
+    .default_option, .select_ul {
+        text-align:center;
+        width: 250px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .products {
+        margin-top: 25px;
+    }
 }
