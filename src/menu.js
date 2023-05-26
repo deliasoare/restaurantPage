@@ -90,16 +90,16 @@ export default function menuScreen() {
     
     function changeMenuOption(options) {
         products.innerHTML = '';
-        prod[options].forEach(opt => {
-            products.append(opt);
-        })
+        if (prod[options]) 
+            prod[options].forEach(opt => {
+                products.append(opt);
+            })
     }
     
      changeMenuOption("Coffee");
      setTimeout(function() {
         const options = document.querySelectorAll('.option');
         options.forEach(option => {
-            console.log('got here');
             option.addEventListener('click', () => {
                 changeMenuOption(option.textContent);
             })

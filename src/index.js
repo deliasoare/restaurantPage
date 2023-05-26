@@ -39,20 +39,22 @@ document.addEventListener('click', (e) => {
         currentPage = 'contact';
     }
 
-    let def = document.querySelector('.default_option');
-    let select = document.querySelector('.select_ul');
-    let options = select.querySelectorAll('.option');
-    
-    if (e.target === def || e.target === def.children[0] || e.target === def.children[0].children[0] || e.target === def.children[0].children[0].children[0] || e.target === def.children[0].children[0].children[1])
-        if (document.query=select.classList.value === 'select_ul inactive')
-            select.classList = 'select_ul active';
-        else
-            select.classList = 'select_ul inactive';
+    if (currentPage === "menu") {
+        let def = document.querySelector('.default_option');
+        let select = document.querySelector('.select_ul');
+        let options = select.querySelectorAll('.option');
+        
+        if (e.target === def || e.target === def.children[0] || e.target === def.children[0].children[0] || e.target === def.children[0].children[0].children[0] || e.target === def.children[0].children[0].children[1])
+            if (document.query=select.classList.value === 'select_ul inactive')
+                select.classList = 'select_ul active';
+            else
+                select.classList = 'select_ul inactive';
 
-    options.forEach(option => {
-        if (e.target === option || e.target === option.children[0] || e.target === option.children[1]) 
-            changeMenu(option);
-    })
+        options.forEach(option => {
+            if (e.target === option || e.target === option.children[0] || e.target === option.children[1]) 
+                changeMenu(option);
+        })
+    }
 })
 
 
