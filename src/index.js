@@ -27,7 +27,7 @@ function changeMenu(option) {
     select.classList = 'select_ul inactive';
 }
 document.addEventListener('click', (e) => {
-    if (e.target === document.querySelector('.home')) {
+    if (e.target === document.querySelector('.home') || e.target === document.querySelector('.title')) {
         loadPage('home');
         currentPage = 'home';
     }
