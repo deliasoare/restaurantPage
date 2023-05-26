@@ -303,9 +303,10 @@ body, * {
     position:absolute;
     min-width:70px;
     left:110%;
-    top:15%;
+    top:10%;
     font-weight:bolder;
     font-size:1.6rem;
+    color: var(--transpdarkBrown);
 }
 ul {
     list-style:none;
