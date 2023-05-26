@@ -36,7 +36,7 @@ function addProduct(image, title, price) {
     return productContainer;
 
 }
-function addOption(title) {
+export function addOption(title) {
     const li = document.createElement('li');
     const option = document.createElement('div');
     const icon = document.createElement('div');
@@ -92,3 +92,4 @@ export default function menuScreen() {
 
     return menu;
 }
+
