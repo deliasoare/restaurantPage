@@ -13,6 +13,17 @@ import StrawberryMilkshake from './strawberryMilkshake.png';
 import Water from './water.png';
 import WatermelonLemonade from './watermelonLemonade.png';
 import Coke from './coke.png';
+import Cheesecake from './Cheesecake.png';
+import PannaCotta from './PannaCotta.png';
+import Cupcake from './Cupcake.png';
+import PuddingCremeCaramel from './PuddingCremeCaramel.png';
+import RedVelvetCheesecake from './RedVelvetCheesecake.png';
+import Milk from './Milk.png';
+import Sugar from './Sugar.png';
+import WhippedCream from './WhippedCream.png';
+import CoffeeBeans from './CoffeeBeans.png';
+import CocoaPowder from './CocoaPowder.png';
+import AlmondMilk from './AlmondMilk.png';
 
 export const prod = {
     Coffee: [
@@ -31,6 +42,21 @@ export const prod = {
         addProduct(Slushie, 'Slushie', 7),
         addProduct(Mojito, 'Mojito', 9),
         addProduct(PinaColada, 'Pina Colada', 9)
+    ],
+    Dessert: [
+        addProduct(Cupcake, 'Cupcake', 6),
+        addProduct(PannaCotta, 'Panna Cotta', 8),
+        addProduct(Cheesecake, 'Cheesecake', 9),
+        addProduct(PuddingCremeCaramel, 'Pudding Creme Caramel', 9),
+        addProduct(RedVelvetCheesecake, 'Red Velvet Cheesecake', 10)
+    ],
+    "Add Ons": [
+        addProduct(Milk, 'Extra Milk', 2),
+        addProduct(AlmondMilk, 'Almond Milk', 4),
+        addProduct(Sugar, 'Extra sugar', 2),
+        addProduct(WhippedCream, 'Whipped Cream', 4),
+        addProduct(CoffeeBeans, 'Coffee Beans', 4),
+        addProduct(CocoaPowder, 'Cocoa Powder', 3)
     ]
 }
 
