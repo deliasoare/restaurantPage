@@ -3,7 +3,7 @@ import homePage from './homepage';
 import menuPage from './menu';
 import contactPage from './contact';
 import {addOption} from './menu';
-
+import Favicon from './favicon.png';
 const output = document.querySelector('#content');
 
 let currentPage = 'home';
@@ -61,10 +61,14 @@ document.addEventListener('click', (e) => {
     }
 })
 
-
 window.onload = function() {
+    let link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.href = Favicon;
+    link.rel = 'icon';
+    let head = document.querySelector('head');
+    head.append(link);
 
     output.appendChild(homePage('home'));
-
     
 }
