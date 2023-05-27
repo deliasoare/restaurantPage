@@ -43,10 +43,10 @@ export function header(cover) {
 export function footer() {
     const footer = document.createElement('div');
     footer.classList = 'footer';
-
-    const footerText = document.createElement('p');
+    const footerText = document.createElement('a');
     footerText.classList = 'footerText';
     footerText.textContent = '@deliasoare';
+    footerText.href = 'https://github.com/deliasoare';
 
     footer.appendChild(footerText);
 
